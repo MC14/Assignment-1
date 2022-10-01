@@ -4,7 +4,7 @@
 import random
 
 print("Hello Player, Welcome to the heist") #Introduces Player to the game
-Char_Choice = print("Please pick a Character 1.Thug 2. Spy: ")
+Char_Choice = input("Please pick a Character 1.Thug 2. Spy: ")
 if Char_Choice == "Thug":
     import Role1
     print("You chose the brutal Thug")
