@@ -1,7 +1,3 @@
-from socket import TIPC_CONN_TIMEOUT
-
-
-import random
 
 t_Phy = 2 # The Physical stat for the Thug, will be used in challenges
 t_IQ = 0 #The Intelligence stat for the Thug, will be used in challenges
