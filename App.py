@@ -27,20 +27,20 @@ print("You job will be to break into the Forfur Manor and steal the Gem that res
 
 Chal_1 = input("First you'll have to get past the security of the party. are you [charm] them or [knock] him out?:")
 if Chal_1 == "knock":
-    Roll = Game.roll_phy(Game.stat_phy)
+    Roll = Game.roll_phy(Game.stat_phy, Game.stat_HP)
 if Chal_1 == "charm":
-    Roll = Game.roll_CHA(Game.stat_CHA)
+    Roll = Game.roll_CHA(Game.stat_CHA, Game.stat_HP)
 
 Chal_2 = input("The party is in full swing, but now you have to slip past, do you plot a [route] to slip by undetected or [blend] in with the guest and wait for your time to strike")
 if Chal_2 == "route":
-    Roll = Game.roll_IQ(Game.stat_IQ)
+    Roll = Game.roll_IQ(Game.stat_IQ, Game.stat_HP)
 if Chal_2 == "blend":
-    Roll = Game.roll_CHA(Game.stat_CHA)
+    Roll = Game.roll_CHA(Game.stat_CHA, Game.stat_HP)
 
 Chal_3 = input("you found the room where the Gem is being kept, but it's locked. do you [break] the door down or [pick] the lock")
 if Chal_3 == "break":
-    Roll = Game.roll_phy(Game.stat_phy)
+    Roll = Game.roll_phy(Game.stat_phy, Game.stat_HP)
 if Chal_3 == "pick":
-    Roll = Game.roll_IQ(Game.stat_IQ)
+    Roll = Game.roll_IQ(Game.stat_IQ, Game.stat_HP)
 
 
