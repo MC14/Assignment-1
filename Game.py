@@ -5,7 +5,8 @@ import Role2 #allows you to use the Role 2 stats
 
 stat_phy = 0 #variables for the stats in order to put the Role stats into for the functions
 stat_IQ = 0
-stat_CHA = 0loop_trigger = 0
+stat_CHA = 0
+loop_trigger = 0
 
 def roll_phy(stat_phy):
 
