@@ -5,29 +5,30 @@ import Game
 import Role1
 import Role2
 import time # the time module, I imported it to use the sleep function, this will help give pauses to the game, allowing text to be read and not spit out super fast
-loopy = 0
+loopy = 0 # a varaible to make loops stay looping until proven otherwise
 print("Hello Player, Welcome to the Forfur Manor heist.") #Introduces Player to the game
-time.sleep(2)
+time.sleep(2) #gives a break in the message in order form the player to read it easier
 print("You job will be to break into the Forfur Manor and steal the Gem that rest in the display. you'll have to get pass security, get through the guests, get into the room and get the gem.") #explaining the backstory to the game
 print("in order to pick what to do, please type the word that with be in the square brackets like this [example] exactly as written.") #explains how to use the input command and what to type in in order to reduce confusion
 time.sleep(2)
- #gives the input command to choose what type of role you wanna play
 while loopy == 0 :
-    Char_Choice = input("Please pick a Character 1.[Thug] 2. [Spy]: ")
+    Char_Choice = input("Please pick a Character 1.[Thug] 2. [Spy]: ") #gives the input command to choose what type of role you wanna play
     if Char_Choice == "Thug": #an if statement saying that if they type Thug, it will make the Game stats used for rolls the same value as the role pick, either Thug or Spy
     
         Game.stat_phy = Role1.t_Phy #game stats refer to the varaible that will be in the roll functions being made to fit the role
         Game.stat_IQ = Role1.t_IQ
         Game.stat_CHA = Role1.t_CHA #the three stats for this game are Phy,IQ and CHA 
-        print("You chose the brutal Thug")
-        loopy = 1
+        print("You chose the brutal Thug") #Prints message to tell player they're choice was recieved
+        loopy = 1 #makes loopy 1 to get us out of the loop
     elif Char_Choice == "Spy": #an elif (else-if) statement so if Spy is chosen instead of Thug, 
-    
-        print("You chose the sneaky Spy")
+        Game.stat_phy = Role2.s_Phy #accesses the spy's stat variables instead of the Thug's
+        Game.stat_IQ = Role2.s_IQ
+        Game.stat_CHA = Role2.s_CHA
+        print("You chose the sneaky Spy") #Prints a message to tell player they're choice was recieved
         loopy = 1
-    else:
-        print("not a valid option")
-        continue
+    else: #else means any other input/message besides the ones describe fall under here
+        print("not a valid option") #tells the player the message wasn't correct
+        continue# continues the loop and keeps it going
 
 
 loopy = 0
