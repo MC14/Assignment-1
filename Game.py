@@ -20,9 +20,15 @@ def roll_phy(stat_phy, stat_HP):
         print("Mega Failure!")
         stat_phy = stat_phy - 1
         stat_HP = stat_HP - 1
+        if stat_HP == 0:
+            print("Game Over, you ran out of HP")
+            exit()
     if dice_result > 3 and dice_result <= 7:
         print("Failure")
         stat_HP = stat_HP - 1
+        if stat_HP == 0:
+            print("Game Over, you ran out of HP")
+            exit()
     if dice_result > 7 and dice_result <=10:
         print("Success, you made it")
     if dice_result > 10:
@@ -43,9 +49,15 @@ def roll_IQ(stat_IQ, stat_HP):
         print("Mega Failure!")
         stat_IQ = stat_IQ - 1
         stat_HP = stat_HP - 1
+        if stat_HP == 0:
+            print("Game Over, you ran out of HP")
+            exit()
     if dice_result > 3 and dice_result <= 7:
         print("Failure")
         stat_HP = stat_HP - 1
+        if stat_HP == 0:
+            print("Game Over, you ran out of HP")
+            exit()
     if dice_result > 7 and dice_result <=10:
         print("Success, you made it")
     if dice_result > 10:
@@ -65,9 +77,16 @@ def roll_CHA(stat_CHA, stat_HP):
         stat_HP = stat_HP - 1
         print(stat_HP)
         print(stat_CHA)
+        if stat_HP == 0:
+            print("Game Over, you ran out of HP")
+            exit()
     if dice_result > 3 and dice_result <= 7:
         print("Failure")
+        print(stat_HP)
         stat_HP = stat_HP - 1
+        if stat_HP == 0:
+            print("Game Over, you ran out of HP")
+            exit()
     if dice_result > 7 and dice_result <=10:
         print("Success, you made it")
     if dice_result > 10:
