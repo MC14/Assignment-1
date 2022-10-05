@@ -16,7 +16,6 @@ Char_Choice = input("Please pick a Character 1.[Thug] 2. [Spy]: ")
 if Char_Choice == "Thug":
     
     Game.stat_phy = Role1.t_Phy
-    print(Game.stat_phy)
     Game.stat_IQ = Role1.t_IQ
     Game.stat_CHA = Role1.t_CHA
     print("You chose the brutal Thug")
