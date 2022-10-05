@@ -8,7 +8,7 @@ stat_phy = 0 #variables for the stats in order to put the Role stats into for th
 stat_IQ = 0
 stat_CHA = 0
 
-def roll_phy(stat_phy, stat_HP):
+def roll_phy(stat_phy):
 
     dice_roll1 = random.randrange (1,7)
     dice_roll2 = random.randrange (1,7)
@@ -19,21 +19,21 @@ def roll_phy(stat_phy, stat_HP):
         print("Mega Failure!")
         print("Game over!, you only get once chance to steal the Gem")
         exit()
-    if dice_result > 3 and dice_result <= 7:
+    if dice_result > 3 and dice_result <= 6:
         print("Failure")
         print("Game over!, you only get once chance to steal the Gem")
         exit()
-    if dice_result > 7 and dice_result <=10:
+    if dice_result > 6 and dice_result <=10:
         print("Success, you made it")
     if dice_result > 10:
-        print(stat_phy)
         print("Super Success!") 
         stat_phy = stat_phy + 1
+        print(stat_phy)
     
 
     return dice_result
 
-def roll_IQ(stat_IQ, stat_HP):
+def roll_IQ(stat_IQ):
     dice_roll1 = random.randrange (1,7)
     dice_roll2 = random.randrange (1,7)
     dice_result = dice_roll1 +dice_roll2 + stat_IQ
@@ -43,18 +43,18 @@ def roll_IQ(stat_IQ, stat_HP):
         print("Mega Failure!")
         print("Game over!, you only get once chance to steal the Gem")
         exit()
-    if dice_result > 3 and dice_result <= 7:
+    if dice_result > 3 and dice_result <= 6:
         print("Failure")
         print("Game over!, you only get once chance to steal the Gem")
         exit()
-    if dice_result > 7 and dice_result <=10:
+    if dice_result > 6 and dice_result <=10:
         print("Success, you made it")
     if dice_result > 10:
         print("Super Success!") 
         stat_IQ = stat_IQ + 1
     return dice_result
 
-def roll_CHA(stat_CHA, stat_HP):
+def roll_CHA(stat_CHA):
     dice_roll1 = random.randrange (1,7)
     dice_roll2 = random.randrange (1,7)
     dice_result = dice_roll1 +dice_roll2 + stat_CHA
@@ -63,12 +63,15 @@ def roll_CHA(stat_CHA, stat_HP):
     if dice_result <= 3:
         print("Mega Failure!")
         print("Game over!, you only get once chance to steal the Gem")
-    if dice_result > 3 and dice_result <= 7:
+        exit()
+    if dice_result > 3 and dice_result <= 6:
         print("Failure")
         print("Game over!, you only get once chance to steal the Gem")
-    if dice_result > 7 and dice_result <=10:
+        exit()
+    if dice_result > 6 and dice_result <=10:
         print("Success, you made it")
     if dice_result > 10:
         print("Super Success!") 
         stat_CHA = stat_CHA + 1
+        print(stat_CHA)
     return dice_result

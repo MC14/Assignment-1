@@ -14,7 +14,6 @@ if Char_Choice == "Thug":
     print(Game.stat_phy)
     Game.stat_IQ = Role1.t_IQ
     Game.stat_CHA = Role1.t_CHA
-    Game.stat_HP = Role1.t_HP
     print("You chose the brutal Thug")
 elif Char_Choice == "Spy":
     
