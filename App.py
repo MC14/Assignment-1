@@ -5,13 +5,12 @@ import Game
 import Role1
 import Role2
 import time # the time module, I imported it to use the sleep function, this will help give pauses to the game, allowing text to be read and not spit out super fast
-loopy = 0 # a varaible to make loops stay looping until proven otherwise
 print("Hello Player, Welcome to the Forfur Manor heist.") #Introduces Player to the game
 time.sleep(2) #gives a break in the message in order form the player to read it easier
 print("You job will be to break into the Forfur Manor and steal the Gem that rest in the display. you'll have to get pass security, get through the guests, get into the room and get the gem.") #explaining the backstory to the game
 print("in order to pick what to do, please type the word that with be in the square brackets like this [example] exactly as written.") #explains how to use the input command and what to type in in order to reduce confusion
 time.sleep(2)
-while loopy == 0 :
+while Game.loop_trigger == 0 :
     Char_Choice = input("Please pick a Character 1.[Thug] 2. [Spy]: ") #gives the input command to choose what type of role you wanna play
     if Char_Choice == "Thug": #an if statement saying that if they type Thug, it will make the Game stats used for rolls the same value as the role pick, either Thug or Spy
     
@@ -19,20 +18,20 @@ while loopy == 0 :
         Game.stat_IQ = Role1.t_IQ
         Game.stat_CHA = Role1.t_CHA #the three stats for this game are Phy,IQ and CHA 
         print("You chose the brutal Thug") #Prints message to tell player they're choice was recieved
-        loopy = 1 #makes loopy 1 to get us out of the loop
+        Game.loop_trigger = 0
     elif Char_Choice == "Spy": #an elif (else-if) statement so if Spy is chosen instead of Thug, 
         Game.stat_phy = Role2.s_Phy #accesses the spy's stat variables instead of the Thug's
         Game.stat_IQ = Role2.s_IQ
         Game.stat_CHA = Role2.s_CHA
         print("You chose the sneaky Spy") #Prints a message to tell player they're choice was recieved
-        loopy = 1
+        Game.loop_trigger = 1
     else: #else means any other input/message besides the ones describe fall under here
         print("not a valid option") #tells the player the message wasn't correct
         continue# continues the loop and keeps it going
 
 
-loopy = 0
-while loopy == 0 :
+Game.loop_trigger = 0
+while Game.loop_trigger == 0 :
     Chal_1 = input("First you'll have to get past the security of the party.are you gonna [charm] him to let them pass or [knock] him out?: ")
     if Chal_1 == "knock":
         Roll = Game.roll_phy(Game.stat_phy)
@@ -41,8 +40,8 @@ while loopy == 0 :
     else:
          print ("not a valid option")
 
-loopy = 0
-while loopy == 0:
+Game.loop_trigger = 0
+while Game.loop_trigger == 0:
     Chal_2 = input("The party is in full swing, but now you have to slip past, do you plot the best [route] to slip by undetected or [blend] in with the guest and wait for your time to strike: ")
     if Chal_2 == "route":
         Roll = Game.roll_IQ(Game.stat_IQ)
@@ -50,9 +49,9 @@ while loopy == 0:
         Roll = Game.roll_CHA(Game.stat_CHA)
     else:
         print ("not a valid option")
-loopy = 0
+Game.loop_trigger = 0
 
-while loopy == 0:
+while Game.loop_trigger == 0:
     Chal_3 = input("you found the room where the Gem is being kept, but it's locked. do you [break] the door down or [pick] the lock?: ")
     if Chal_3 == "break":
         Roll = Game.roll_phy(Game.stat_phy)
@@ -60,10 +59,10 @@ while loopy == 0:
         Roll = Game.roll_IQ(Game.stat_IQ)
     else:
         print ("not a valid option")
-loopy = 0
+Game.loop_trigger = 0
 print("You're finally into the room. the Gem is seating inside a glass case, there's a key pass and multiple cameras watching the gem.")
 time.sleep(2)
-while loopy == 0:
+while Game.loop_trigger == 0:
     Chal_4 = input("do you [shatter] the glass case, [decrypt] the key code or [disguise] yourself to fool the cameras?: ")
     if Chal_4 == "shatter":
         Roll = Game.roll_phy(Game.stat_phy)
