@@ -33,6 +33,8 @@ def roll_phy(stat_phy):
         App.loopy = 1
     
 
+    return dice_result
+
 def roll_IQ(stat_IQ):
     dice_roll1 = random.randrange (1,7)
     dice_roll2 = random.randrange (1,7)
@@ -53,7 +55,8 @@ def roll_IQ(stat_IQ):
     if dice_result > 10:
         print("Super Success!") 
         stat_IQ = stat_IQ + 1
-        App.loopy = 1
+        
+    return dice_result
 
 def roll_CHA(stat_CHA):
     dice_roll1 = random.randrange (1,7)
@@ -77,3 +80,4 @@ def roll_CHA(stat_CHA):
         stat_CHA = stat_CHA + 1
         print(stat_CHA)
         App.loopy = 1
+    return dice_result
