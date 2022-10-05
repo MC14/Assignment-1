@@ -23,13 +23,13 @@ else:
     print ("not a valid option")
 
 
-print("You job will be to break into the Forfur Manor and steal the Gem that rest in the display. you'll have to get pass security, get through the guests, sneak into the room and get the gem.")
+print("You job will be to break into the Forfur Manor and steal the Gem that rest in the display. you'll have to get pass security, get through the guests, get into the room and get the gem.")
 
 Chal_1 = input("First you'll have to get past the security of the party. are you [charm] them or [knock] him out?:")
 if Chal_1 == "knock":
     Roll = Game.roll_phy(Game.stat_phy)
 if Chal_1 == "charm":
-    Roll = Game.roll_CHA()
+    Roll = Game.roll_CHA(Game.stat_CHA)
 
 Chal_2 = input("The party is in full swing, but now you have to slip past, do you plot a [route] to slip by undetected or [blend] in with the guest and wait for your time to strike")
 if Chal_2 == "route":
@@ -37,6 +37,10 @@ if Chal_2 == "route":
 if Chal_2 == "blend":
     Roll = Game.roll_CHA(Game.stat_CHA)
 
-Chal_3 = input("")
+Chal_3 = input("you found the room where the Gem is being kept, but it's locked. do you [break] the door down or [pick] the lock")
+if Chal_3 == "break":
+    Roll = Game.roll_phy(Game.stat_phy)
+if Chal_3 == "pick":
+    Roll = Game.roll_IQ(Game.stat_IQ)
 
 
