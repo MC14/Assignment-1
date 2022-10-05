@@ -1,5 +1,5 @@
 
-
+import App
 import random #imports Random in order to be used in the program
 import Role1 #allows you to use the Role 1 stats
 import Role2 #allows you to use the Role 2 stats
@@ -25,13 +25,13 @@ def roll_phy(stat_phy):
         exit()
     if dice_result > 6 and dice_result <=10:
         print("Success, you made it")
+        App.loopy = 1
     if dice_result > 10:
         print("Super Success!") 
         stat_phy = stat_phy + 1
         print(stat_phy)
+        App.loopy = 1
     
-
-    return dice_result
 
 def roll_IQ(stat_IQ):
     dice_roll1 = random.randrange (1,7)
@@ -49,10 +49,11 @@ def roll_IQ(stat_IQ):
         exit()
     if dice_result > 6 and dice_result <=10:
         print("Success, you made it")
+        App.loopy = 1
     if dice_result > 10:
         print("Super Success!") 
         stat_IQ = stat_IQ + 1
-    return dice_result
+        App.loopy = 1
 
 def roll_CHA(stat_CHA):
     dice_roll1 = random.randrange (1,7)
@@ -70,8 +71,9 @@ def roll_CHA(stat_CHA):
         exit()
     if dice_result > 6 and dice_result <=10:
         print("Success, you made it")
+        App.loopy = 1
     if dice_result > 10:
         print("Super Success!") 
         stat_CHA = stat_CHA + 1
         print(stat_CHA)
-    return dice_result
+        App.loopy = 1
