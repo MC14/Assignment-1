@@ -9,7 +9,7 @@ stat_IQ = 0
 stat_CHA = 0
 stat_HP = 0
 
-def roll_phy(stat_phy):
+def roll_phy(stat_phy, stat_HP):
 
     dice_roll1 = random.randrange (1,7)
     dice_roll2 = random.randrange (1,7)
@@ -33,7 +33,7 @@ def roll_phy(stat_phy):
 
     return dice_result
 
-def roll_IQ(stat_IQ):
+def roll_IQ(stat_IQ, stat_HP):
     dice_roll1 = random.randrange (1,7)
     dice_roll2 = random.randrange (1,7)
     dice_result = dice_roll1 +dice_roll2 + stat_IQ
@@ -53,7 +53,7 @@ def roll_IQ(stat_IQ):
         stat_IQ = stat_IQ + 1
     return dice_result
 
-def roll_CHA(stat_CHA):
+def roll_CHA(stat_CHA, stat_HP):
     dice_roll1 = random.randrange (1,7)
     dice_roll2 = random.randrange (1,7)
     dice_result = dice_roll1 +dice_roll2 + stat_CHA
