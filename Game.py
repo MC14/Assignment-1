@@ -1,6 +1,6 @@
 
 import App
-import random #imports Random in order to be used in the program
+import random #imports random in order to be used in the program
 import Role1 #allows you to use the Role 1 stats
 import Role2 #allows you to use the Role 2 stats
 
@@ -21,13 +21,13 @@ def roll_phy(stat_phy):
         exit()
     if dice_result > 3 and dice_result <= 6:
         print("Failure")
-        print("Game over!, you only get once chance to steal the Gem")
+        print("So close! but....Game over, you only get once chance to steal the Gem")
         exit()
     if dice_result > 6 and dice_result <=10:
         print("Success, you made it")
         App.loopy = 1
     if dice_result > 10:
-        print("Super Success!") 
+        print("Super Success! You're really strong") 
         stat_phy = stat_phy + 1
         print(stat_phy)
         App.loopy = 1
