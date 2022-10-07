@@ -3,18 +3,17 @@ import random #imports andom in order to be used in the program
 import Role1 #allows you to use the Role 1 stats
 import Role2 #allows you to use the Role 2 stats
 
-stat_phy = 0 #variables for the stats in order to put the Role stats into for the functions
-stat_IQ = 0
-stat_CHA = 0
+
 loop_trigger = 0
 
-def roll_phy(stat_phy):
 
-    dice_roll1 = random.randrange (1,7)
-    dice_roll2 = random.randrange (1,7)
-    dice_result = dice_roll1 +dice_roll2 + stat_phy
+def roll_phy(roll_d):
+
+    dice_roll1 = random.randrange (5,7)
+    dice_roll2 = random.randrange (5,7)
+    dice_result = dice_roll1 +dice_roll2 + r_phy
     
-    print(dice_roll1,"+",dice_roll2,"+",stat_phy,"=",dice_result)
+    print(dice_roll1,"+",dice_roll2,"+",r_phy,"=",dice_result)
     if dice_result <= 3:
         print("Mega Failure!")
         print("Game over!, you only get once chance to steal the Gem")
@@ -29,18 +28,18 @@ def roll_phy(stat_phy):
         print("Success, you made it")
     if dice_result > 10:
         print("Super Success! You're really strong") 
-        stat_phy = stat_phy + 1
-        print(stat_phy)
+        r_phy = r_phy + 1
+        print(r_phy)
     
 
     return dice_result
 
-def roll_IQ(stat_IQ):
+def roll_IQ(role_d):
     dice_roll1 = random.randrange (1,7)
     dice_roll2 = random.randrange (1,7)
-    dice_result = dice_roll1 +dice_roll2 + stat_IQ
+    dice_result = dice_roll1 +dice_roll2 + r_IQ
     
-    print(dice_roll1,"+",dice_roll2,"+",stat_IQ,"=",dice_result)
+    print(dice_roll1,"+",dice_roll2,"+",r_IQ,"=",dice_result)
     if dice_result <= 3:
         print("Mega Failure!")
         print("Game over!, you only get once chance to steal the Gem")
@@ -53,16 +52,16 @@ def roll_IQ(stat_IQ):
         print("Success, you made it")
     if dice_result > 10:
         print("Super Success!") 
-        stat_IQ = stat_IQ + 1
+        r_IQ = r_IQ + 1
         
     return dice_result
 
-def roll_CHA(stat_CHA):
-    dice_roll1 = random.randrange (1,7)
-    dice_roll2 = random.randrange (1,7)
-    dice_result = dice_roll1 +dice_roll2 + stat_CHA
+def roll_CHA(role_d):
+    dice_roll1 = random.randrange (5,7)
+    dice_roll2 = random.randrange (5,7)
+    dice_result = dice_roll1 +dice_roll2 + role_d.r_CHA
     
-    print(dice_roll1,"+",dice_roll2,"+",stat_CHA,"=",dice_result)
+    print(dice_roll1,"+",dice_roll2,"+",role_d.r_CHA,"=",dice_result)
     if dice_result <= 3:
         print("Mega Failure!")
         print("Game over!, you only get once chance to steal the Gem")
@@ -75,6 +74,6 @@ def roll_CHA(stat_CHA):
         print("Success, you made it")
     if dice_result > 10:
         print("Super Success!") 
-        stat_CHA = stat_CHA + 1
-        print(stat_CHA)
+        role_d.r_CHA = role_d.r_CHA + 1
+        print(role_d.r_CHA)
     return dice_result
