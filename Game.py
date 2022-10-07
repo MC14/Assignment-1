@@ -19,18 +19,20 @@ def roll_phy(stat_phy):
         print("Mega Failure!")
         print("Game over!, you only get once chance to steal the Gem")
         exit()
+
     if dice_result > 3 and dice_result <= 6:
         print("Failure")
         print("So close! but....Game over, you only get once chance to steal the Gem")
         exit()
+
     if dice_result > 6 and dice_result <=10:
         print("Success, you made it")
-    loop_trigger = 1
+        loop_trigger = 1
     if dice_result > 10:
         print("Super Success! You're really strong") 
         stat_phy = stat_phy + 1
         print(stat_phy)
-    loop_trigger = 1
+        loop_trigger = 1
     
 
     return dice_result
