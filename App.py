@@ -18,7 +18,7 @@ while Game.loop_trigger == 0 :
         Game.stat_IQ = Role1.t_IQ
         Game.stat_CHA = Role1.t_CHA #the three stats for this game are Phy,IQ and CHA 
         print("You chose the brutal Thug") #Prints message to tell player they're choice was recieved
-        Game.loop_trigger = 0
+        Game.loop_trigger = 1
     elif Char_Choice == "Spy": #an elif (else-if) statement so if Spy is chosen instead of Thug, 
         Game.stat_phy = Role2.s_Phy #accesses the spy's stat variables instead of the Thug's
         Game.stat_IQ = Role2.s_IQ
