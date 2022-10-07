@@ -35,8 +35,10 @@ while Game.loop_trigger == 0 :
     Chal_1 = input("First you'll have to get past the security of the party.are you gonna [charm] him to let them pass or [knock] him out?: ")
     if Chal_1 == "knock":
         Roll = Game.roll_phy(Game.stat_phy)
+        Game.loop_trigger = 1
     elif Chal_1 == "charm":
         Roll = Game.roll_CHA(Game.stat_CHA)
+        Game.loop_trigger = 1
     else:
          print ("not a valid option")
 
@@ -45,8 +47,10 @@ while Game.loop_trigger == 0:
     Chal_2 = input("The party is in full swing, but now you have to slip past, do you plot the best [route] to slip by undetected or [blend] in with the guest and wait for your time to strike: ")
     if Chal_2 == "route":
         Roll = Game.roll_IQ(Game.stat_IQ)
+        Game.loop_trigger = 1
     elif Chal_2 == "blend":
         Roll = Game.roll_CHA(Game.stat_CHA)
+        Game.loop_trigger = 1
     else:
         print ("not a valid option")
 Game.loop_trigger = 0
@@ -55,8 +59,10 @@ while Game.loop_trigger == 0:
     Chal_3 = input("you found the room where the Gem is being kept, but it's locked. do you [break] the door down or [pick] the lock?: ")
     if Chal_3 == "break":
         Roll = Game.roll_phy(Game.stat_phy)
+        Game.loop_trigger = 1
     elif Chal_3 == "pick":
         Roll = Game.roll_IQ(Game.stat_IQ)
+        Game.loop_trigger = 1
     else:
         print ("not a valid option")
 Game.loop_trigger = 0
@@ -66,10 +72,13 @@ while Game.loop_trigger == 0:
     Chal_4 = input("do you [shatter] the glass case, [decrypt] the key code or [disguise] yourself to fool the cameras?: ")
     if Chal_4 == "shatter":
         Roll = Game.roll_phy(Game.stat_phy)
+        Game.loop_trigger = 1
     elif Chal_4 == "decrypt":
         Roll = Game.roll_IQ(Game.stat_IQ)
+        Game.loop_trigger = 1
     elif Chal_4 == "disguise":
         Roll = Game.roll_CHA(Game.stat_CHA)
+        Game.loop_trigger = 1
     else:
         print ("not a valid option")
 
