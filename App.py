@@ -83,5 +83,3 @@ while Game.loop_trigger == 0:
 print("congrats, you slipped away with the Gem in your hands, you're gonna be flithy rich!")
 time.sleep(4)
 exit()
-
-Game.roll_phy(role_d)
