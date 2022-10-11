@@ -6,15 +6,15 @@ import time # the time module, I imported it to use the sleep function, this wil
 
 
 print("Hello Player, Welcome to the Forfur Manor heist.") #Introduces Player to the game
-time.sleep(2) #gives a break in the message in order form the player to read it easier
+time.sleep(4) #gives a break in the message in order form the player to read it easier
 print("You job will be to break into the Forfur Manor and steal the Gem that rest in the display. you'll have to get pass security, get through the guests, get into the room and get the gem.") #explaining the backstory to the game
 print("in order to pick what to do, please type the word that with be in the square brackets like this [example] exactly as written.") #explains how to use the input command and what to type in in order to reduce confusion
-time.sleep(2)
+time.sleep(6)
 while Game.loop_trigger == 0 :
     Char_Choice = input("Please pick a Character 1.[Thug] 2. [Spy]: ") #gives the input command to choose what type of role you wanna play
     if Char_Choice == "Thug": #an if statement saying that if they type Thug, it will make the Game stats used for rolls the same value as the role pick, either Thug or Spy
         import Role1
-        role_d = Role1.Thug()
+        role_d = Role1.Thug() #adds a variable
         print("You chose the brutal Thug") #Prints message to tell player they're choice was recieved
         Game.loop_trigger = 1
     elif Char_Choice == "Spy": #an elif (else-if) statement so if Spy is chosen instead of Thug,
