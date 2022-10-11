@@ -25,12 +25,12 @@ def roll_phy(stat_phy):
         exit()
     if dice_result > 6 and dice_result <=10:
         print("Success, you made it")
-        App.loopy = 1
+        App.loop_trigger = 1
     if dice_result > 10:
         print("Super Success!") 
         stat_phy = stat_phy + 1
         print(stat_phy)
-        App.loopy = 1
+        App.loop_trigger = 1
     
 
     return dice_result
@@ -51,7 +51,7 @@ def roll_IQ(stat_IQ):
         exit()
     if dice_result > 6 and dice_result <=10:
         print("Success, you made it")
-        App.loopy = 1
+        App.loop_trigger = 1
     if dice_result > 10:
         print("Super Success!") 
         stat_IQ = stat_IQ + 1
@@ -74,10 +74,10 @@ def roll_CHA(stat_CHA):
         exit()
     if dice_result > 6 and dice_result <=10:
         print("Success, you made it")
-        App.loopy = 1
+        App.loop_trigger = 1
     if dice_result > 10:
         print("Super Success!") 
         stat_CHA = stat_CHA + 1
         print(stat_CHA)
-        App.loopy = 1
+        App.loop_trigger = 1
     return dice_result
