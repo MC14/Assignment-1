@@ -38,9 +38,9 @@ def roll_phy(role_d):
 def roll_IQ(role_d):
     dice_roll1 = random.randrange (1,7)
     dice_roll2 = random.randrange (1,7)
-    dice_result = dice_roll1 +dice_roll2 + r_IQ
+    dice_result = dice_roll1 +dice_roll2 + role_d.r_IQ
     
-    print(dice_roll1,"+",dice_roll2,"+",r_IQ,"=",dice_result)
+    print(dice_roll1,"+",dice_roll2,"+",role_d.r_IQ,"=",dice_result)
     if dice_result <= 3:
         print("Mega Failure!")
         print("Game over!, you only get once chance to steal the Gem")
@@ -53,7 +53,7 @@ def roll_IQ(role_d):
         print("Success, you made it")
     if dice_result > 10:
         print("Super Success!") 
-        r_IQ = r_IQ + 1
+        role_d.r_IQ = role_d.r_IQ + 1
         
     return dice_result
 
