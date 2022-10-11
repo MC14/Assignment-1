@@ -15,12 +15,12 @@ while Game.loop_trigger == 0 :
     Char_Choice = input("Please pick a Character 1.[Thug] 2. [Spy]: ") #gives the input command to choose what type of role you wanna play
     if Char_Choice == "Thug": #an if statement saying that if they type Thug, it will make the Game stats used for rolls the same value as the role pick, either Thug or Spy
         import Role1
-        role_d = Role1.Thug
+        role_d = Role1.Thug()
         print("You chose the brutal Thug") #Prints message to tell player they're choice was recieved
         Game.loop_trigger = 1
     elif Char_Choice == "Spy": #an elif (else-if) statement so if Spy is chosen instead of Thug,
         import Role2
-        role_d = Role2.Spy
+        role_d = Role2.Spy()
         print("You chose the sneaky Spy") #Prints a message to tell player they're choice was recieved
         Game.loop_trigger = 1
     else: #else means any other input/message besides the ones describe fall under here

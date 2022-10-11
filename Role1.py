@@ -6,5 +6,5 @@ class Thug:
     self.r_CHA = -1 #The Charisma Stat for the Thug, will be used in challenges
 
  def show(self):
-    print(self.r_Phy)
+    print(self.r_phy)
 
