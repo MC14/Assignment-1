@@ -1,11 +1,10 @@
 #This portion of the Package is where the actual game is played by using input and print systems.
 #The game will give a short description of the game as well as import the roles and game systems for then user to play
 #then it will use function calls to the other programs in order to roll nice and continue the game
-import Game
-import time
+import Game # The Game module, imports it so that I can call functions from the Game program like loop.trigger
+import time # the time module, I imported it to use the sleep function, this will help give pauses to the game, allowing text to be read and not spit out super fast
 
-from Role1 import Thug
-from Role2 import Spy # the time module, I imported it to use the sleep function, this will help give pauses to the game, allowing text to be read and not spit out super fast
+
 print("Hello Player, Welcome to the Forfur Manor heist.") #Introduces Player to the game
 time.sleep(2) #gives a break in the message in order form the player to read it easier
 print("You job will be to break into the Forfur Manor and steal the Gem that rest in the display. you'll have to get pass security, get through the guests, get into the room and get the gem.") #explaining the backstory to the game

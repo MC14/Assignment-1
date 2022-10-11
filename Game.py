@@ -9,8 +9,8 @@ loop_trigger = 0
 
 def roll_phy(role_d):
 
-    dice_roll1 = random.randrange (5,7)
-    dice_roll2 = random.randrange (5,7)
+    dice_roll1 = random.randrange (1,7)
+    dice_roll2 = random.randrange (1,7)
     dice_result = dice_roll1 +dice_roll2 + role_d.r_phy
     
     print(dice_roll1,"+",dice_roll2,"+",role_d.r_phy,"=",dice_result)
@@ -57,8 +57,8 @@ def roll_IQ(role_d):
     return dice_result
 
 def roll_CHA(role_d):
-    dice_roll1 = random.randrange (5,7)
-    dice_roll2 = random.randrange (5,7)
+    dice_roll1 = random.randrange (1,7)
+    dice_roll2 = random.randrange (1,7)
     dice_result = dice_roll1 +dice_roll2 + role_d.r_CHA
     
     print(dice_roll1,"+",dice_roll2,"+",role_d.r_CHA,"=",dice_result)
