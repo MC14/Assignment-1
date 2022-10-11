@@ -2,7 +2,6 @@
 import random #imports andom in order to be used in the program
 import Role1 #allows you to use the Role 1 stats
 import Role2 #allows you to use the Role 2 stats
-import App
 
 
 loop_trigger = 0
