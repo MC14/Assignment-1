@@ -78,5 +78,4 @@ def roll_CHA(role_d): #follows many of the same code as the other two but instea
     elif dice_result > 10:
         print("Super Success!") 
         role_d.r_CHA = role_d.r_CHA + 1
-        print(role_d.r_CHA)
     return dice_result
