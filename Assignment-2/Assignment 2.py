@@ -1,3 +1,9 @@
+class Product:
+    print("*** Morgan's Sample Stock Statment ***")
+    def _init_(self,code,name,price,manu_cost,stock_lvl,month_units_manu):
+        print("Product Code: ",code,)
+
+
 class Application:
 
     print("Welcome to Morgan's Magnificent Products")
@@ -11,12 +17,6 @@ class Application:
 
 
 
-
-
-class Product:
-    print("*** Morgan's Sample Stock Statment ***")
-    def _init_(self,code,name,price,manu_cost,stock_lvl,month_units_manu):
-        print("Product Code: ",code,)
         
 
 
